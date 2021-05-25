@@ -3,7 +3,6 @@
 This is a short program the demonstrates how to load a dynamic library
 in a POSIX operating system (OS) and invoke a user-defined function therein.
 
-
 #### Scenario
 
 In this demo, we are going to play the role of a software architect, Riley, who is engineering
@@ -21,8 +20,8 @@ Zoe
 ```
 
 To implement Zoe's request, we are going to engineer ACME so that a plugin writer can build
-a shared library that implements the `loot_box_opened` function. ACME will attempt to load the
-plugin's dynamic library and call that function when a user opens a loot box.
+a shared library that implements the `loot_box_opened_customization` function. ACME will attempt
+to load the plugin and call that function when a player opens a loot box.
 
 Chris(tina) is our customer, the plugin writer. They are going to write the custom functionality
 that executes when a loot box is opened.
@@ -50,12 +49,7 @@ This demo uses the `cmake` system.
 Once you have built the demo, running it is easy.
 
 1. Make sure that you are in the `dlopen-demo-build` directory.
-2. `./application`.
+2. `./acme`.
 
-If everything went according to plan, you should see 
-
-```
-This is a user plugin function doing its work.
-```
-
-printed on the screen!
+If everything went according to plan, you should see a message printed to the screen.
+Better luck next time you play ACME.
